@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "144720687699",
+    "firebase_url": "https://chatapp-7727d.firebaseio.com",
+    "project_id": "chatapp-7727d",
+    "storage_bucket": "chatapp-7727d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144720687699:android:2f4fa215781f8264b98ca6",
+        "android_client_info": {
+          "package_name": "com.julion.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144720687699-lplvmdavrserih2s7l7cq0c3fpjig1jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOoWKKIWIbGThc2vc5FfT5fME9zy-EW1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144720687699-lplvmdavrserih2s7l7cq0c3fpjig1jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
