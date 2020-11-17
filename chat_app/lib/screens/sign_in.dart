@@ -90,13 +90,13 @@ class SignInState extends State<SignIn> {
                                 SizedBox(
                                     height: 18,
                                 ),
-                                Container(
+                                /*Container(
                                     alignment: Alignment.centerRight,
                                     child: Text('Forgot password?',style: simpleTextStyle(),),
                                 ),
                                 SizedBox(
                                     height: 20,
-                                ),
+                                ),*/
                                 GestureDetector(
                                     onTap: () {
                                         signIn();
@@ -123,7 +123,7 @@ class SignInState extends State<SignIn> {
                                 SizedBox(
                                     height: 20,
                                 ),
-                                Container(
+                                /*Container(
                                     alignment: Alignment.center,
                                     width: MediaQuery.of(context).size.width,
                                     padding: EdgeInsets.symmetric(vertical: 15),
@@ -136,7 +136,7 @@ class SignInState extends State<SignIn> {
                                         fontSize: 16
                                     ),),
                                 ),
-                                SizedBox(height: 20,),
+                                SizedBox(height: 20,),*/
                                 Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
