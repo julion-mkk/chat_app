@@ -3,6 +3,7 @@ import 'package:chat_app/services/auth.dart';
 import 'package:chat_app/services/database.dart';
 import 'package:chat_app/widgets/widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
 import 'chat_rooms.dart';
@@ -32,19 +33,36 @@ class SignInState extends State<SignIn> {
                 print(value);
             });
 
-            HelperFunctions.savedUserLoggedInSharedPreference(true);
-            print(snapShotUserInfo.documents);
-            HelperFunctions.savedUsernameSharedPreference(snapShotUserInfo.documents[0].data['name']);
+
 
             await _authMethods.signInWithEmailAndPassword(emailController.text, passwordController.text).then((value){
-                if(value != null)
+                if(value != null) {
+                    HelperFunctions.savedUserLoggedInSharedPreference(true);
+                    print(snapShotUserInfo.documents);
+                    HelperFunctions.savedUsernameSharedPreference(snapShotUserInfo.documents[0].data['name']);
                     Navigator.pushReplacement(context, MaterialPageRoute(
                         builder: (context)=> ChatRoom()
                     ));
+                }
+
+                else {
+                    setState(() {
+                        isLoading = false;
+                    });
+                    flushBar(context);
+                }
             });
 
 
         }
+    }
+
+    flushBar(BuildContext context) {
+        Flushbar(
+            message: "Username or password is wrong, Try again",
+            duration: Duration(seconds: 3),
+            flushbarPosition: FlushbarPosition.BOTTOM,
+        )..show(context);
     }
     Widget build(BuildContext context) {
         return Scaffold(

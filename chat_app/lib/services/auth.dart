@@ -11,9 +11,11 @@ class AuthMethods {
         try {
             AuthResult result = await _auth.signInWithEmailAndPassword(email: email, password: password);
             FirebaseUser user= result.user;
+            print("hello user: $user");
             return _user(user);
         }catch(e) {
             print('try catch error auth: ${e.toString()}');
+            return null;
         }
     }
 
